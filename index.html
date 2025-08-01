@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThatWhy - Innovation & Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700,800&display=swap">
     <style>
         body {
             font-family: 'Inter', 'Arial', sans-serif;
@@ -28,6 +28,7 @@
             background: #fff;
             box-shadow: 0 1px 6px #0001;
             padding: 16px;
+            flex-wrap: wrap;
         }
         .navbar a {
             color: #1d3557;
@@ -37,8 +38,9 @@
             border-radius: 10px;
             transition: background .2s;
         }
-        .navbar a:hover {
+        .navbar a:hover, .navbar a:active, .navbar a:focus {
             background: #e9ecef;
+            outline: none;
         }
         .hero {
             text-align: center;
@@ -78,10 +80,12 @@
             text-decoration: none;
             box-shadow: 0 3px 24px #e6394620;
             transition: transform .13s, box-shadow .2s;
+            display: inline-block;
         }
-        .cta-button:hover {
+        .cta-button:hover, .cta-button:focus {
             transform: scale(1.07);
             box-shadow: 0 6px 32px #e6394630;
+            outline: none;
         }
         .content {
             padding: 60px 12vw 32px 12vw;
@@ -92,6 +96,59 @@
             color: #1d3557;
             margin-top: 32px;
             margin-bottom: 16px;
+        }
+        /* Works section */
+        .works {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px;
+            justify-content: center;
+            margin-bottom: 36px;
+        }
+        .works-group {
+            min-width: 270px;
+            max-width: 360px;
+            flex: 1 1 310px;
+        }
+        .works-group h3 {
+            color: #457b9d;
+            font-size: 22px;
+            margin: 0 0 12px 0;
+            font-weight: 700;
+        }
+        .work-card {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #fff;
+            border-radius: 13px;
+            box-shadow: 0 1px 6px #0001;
+            padding: 16px 18px 12px 13px;
+            margin-bottom: 13px;
+            font-size: 16px;
+            /* NEW เพิ่มบรรทัดนี้ */
+            min-height: 64px; /* ให้สูงเท่ากันทุกอัน ถ้า emoji หรือข้อความสั้น/ยาว */
+        }
+
+        .work-status {
+            font-size: 28px; /* ใหญ่ขึ้น */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 36px; /* ความกว้างคงที่ emoji จะไม่โยก */
+        }
+
+        .work-card > div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start; /* ถ้าอยากกลางเป๊ะ: เปลี่ยนเป็น center */
+        }
+        .work-status.done {
+            color: #17a34a;
+        }
+        .work-status.progress {
+            color: #e89b16;
         }
         .services {
             display: flex;
@@ -108,12 +165,13 @@
             min-width: 250px;
             max-width: 310px;
             text-align: center;
-            flex: 1;
+            flex: 1 1 260px;
             transition: transform .16s, box-shadow .19s;
         }
-        .service-card:hover {
+        .service-card:hover, .service-card:focus-within {
             transform: translateY(-4px) scale(1.04);
             box-shadow: 0 4px 28px #457b9d30;
+            outline: none;
         }
         .service-icon {
             font-size: 45px;
@@ -146,51 +204,163 @@
             font-size: 19px;
             opacity: .85;
         }
-        .footer a:hover {
+        .footer a:hover, .footer a:focus {
             opacity: 1;
+            outline: none;
         }
+        /* Responsive for tablets */
         @media (max-width: 900px) {
             .content { padding: 40px 5vw; }
             .services { flex-direction: column; gap: 20px; }
+            .service-card { max-width: 400px; margin: 0 auto; }
+            .works { flex-direction: column; gap: 18px; }
+            .works-group { max-width: 99vw; }
+        }
+        /* Responsive for mobile */
+        @media (max-width: 600px) {
+            .header {
+                font-size: 21px;
+                padding: 19px 8px 9px;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 5px;
+                padding: 12px 4vw;
+                font-size: 16px;
+            }
+            .navbar a {
+                font-size: 16px;
+                padding: 9px 0;
+            }
+            .hero {
+                padding: 44px 6vw 32px 6vw;
+            }
+            .hero h1 {
+                font-size: 29px;
+                margin-bottom: 10px;
+            }
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 18px;
+            }
+            .cta-button {
+                font-size: 15px;
+                padding: 11px 25px;
+            }
+            .content {
+                padding: 28px 4vw 22px 4vw;
+            }
+            h2 {
+                font-size: 20px;
+                margin-top: 20px;
+                margin-bottom: 8px;
+            }
+            .service-card {
+                padding: 23px 7vw 19px;
+                font-size: 15px;
+                min-width: unset;
+                max-width: 95vw;
+            }
+            .service-icon {
+                font-size: 30px;
+                margin-bottom: 12px;
+            }
+            .why {
+                padding: 19px 5vw;
+                font-size: 14px;
+            }
+            .works { margin-bottom: 14px; }
+            .work-card { font-size: 14px; padding: 12px 8vw 8px 5vw; }
+            .works-group h3 { font-size: 17px; }
+            .footer {
+                font-size: 13px;
+                padding: 9px 0 3px;
+                margin-top: 25px;
+            }
         }
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700,800&display=swap">
 </head>
 <body>
     <div class="header">Welcome to ThatWhy</div>
-    <div class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#services">Services</a>
+        <a href="#works">Works</a>
         <a href="#why">Why Us?</a>
         <a href="#contact">Contact</a>
-    </div>
+    </nav>
     <div class="hero">
         <h1>Innovate & Inspire</h1>
         <p>Your partner in driving innovation and<br>delivering impactful solutions.</p>
         <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
-    <div class="content">
+    <main class="content">
         <h2 id="about">About Us</h2>
         <p>ThatWhy is a leading provider of IT solutions and business transformation services, delivering impactful digital experiences for forward-thinking businesses.</p>
 
         <h2 id="services">Our Services</h2>
-        <div class="services">
-            <div class="service-card">
+        <section class="services">
+            <div class="service-card" tabindex="0">
                 <div class="service-icon">🤖</div>
                 <h3>Process Automation</h3>
                 <p>Streamline your workflows and boost productivity with robust automation solutions tailored for your business.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" tabindex="0">
                 <div class="service-icon">🛠️</div>
                 <h3>IT Service Management</h3>
                 <p>Transform your IT operations for agility and reliability using modern ITSM frameworks and best practices.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" tabindex="0">
                 <div class="service-icon">💻</div>
                 <h3>Custom Software</h3>
                 <p>Design and deliver powerful, user-friendly apps and digital platforms that elevate your customer experience.</p>
             </div>
-        </div>
+        </section>
+
+        <h2 id="works">Our Works</h2>
+        <section class="works">
+            <div class="works-group">
+                <h3>Featured Projects</h3>
+                <div class="work-card">
+                    <span class="work-status done">✔</span>
+                    <div>
+                        <b>Spendora App</b><br>
+                        Personal time tracker web-app (React, Stripe)
+                    </div>
+                </div>
+                <div class="work-card">
+                    <span class="work-status done">✔</span>
+                    <div>
+                        <b>TimeTagger SaaS</b><br>
+                        Activity & productivity analytics for teams (AWS EC2, Python, SaaS model)
+                    </div>
+                </div>
+                <div class="work-card">
+                    <span class="work-status done">✔</span>
+                    <div>
+                        <b>IT Operations Automation</b><br>
+                        Automated IT ticketing & reporting for hospitality sector (Jira, Power Automate)
+                    </div>
+                </div>
+            </div>
+            <div class="works-group">
+                <h3>In Progress</h3>
+                <div class="work-card">
+                    <span class="work-status progress">⏳</span>
+                    <div>
+                        <b>KepBo (Kakeibo Budget App)</b><br>
+                        Multi-language household budgeting app (Mobile-first)
+                    </div>
+                </div>
+                <div class="work-card">
+                    <span class="work-status progress">⏳</span>
+                    <div>
+                        <b>AVC IT Service Portal</b><br>
+                        Modern user self-service portal for club members (SharePoint, ITSM integration)
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="why" id="why">
             <h2>Why ThatWhy?</h2>
@@ -202,13 +372,15 @@
 
         <h2 id="contact">Contact Us</h2>
         <p>Email: <a href="mailto:hello@thatwhy.me">hello@thatwhy.me</a></p>
-    </div>
-    <div class="footer">
-        &copy; 2025 ThatWhy. All Rights Reserved.
-        <!--<div class="social">
+    </main>
+    <footer class="footer">
+        &copy; 2025 ThatWhy.Me All Rights Reserved.
+        <!--
+        <div class="social">
             <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">🔗</a>
             <a href="https://facebook.com/" target="_blank" aria-label="Facebook">📘</a>
-        </div>-->
-    </div>
+        </div>
+        -->
+    </footer>
 </body>
 </html>
