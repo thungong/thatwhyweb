@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThatWhy - Innovation & Solutions</title>
+    <meta name="description" content="ThatWhy provides IT solutions and business transformation services. We specialize in process automation, IT service management, and custom software development.">
+    <meta name="        <div class="social">
+            <a href="https://www.linkedin.com/company/thatwhy" target="_blank" aria-label="LinkedIn">🔗</a>
+            <a href="https://twitter.com/thatwhy" target="_blank" aria-label="Twitter">🐦</a>
+            <a href="https://github.com/thatwhy" target="_blank" aria-label="GitHub">💻</a>
+        </div>rds" content="IT solutions, business transformation, process automation, IT service management, custom software, digital transformation">
+    <meta name="author" content="ThatWhy">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://thatwhy.me/">
+    <meta property="og:title" content="ThatWhy - Innovation & Solutions">
+    <meta property="og:description" content="Leading provider of IT solutions and business transformation services for forward-thinking businesses.">
+    <meta property="og:image" content="https://thatwhy.me/images/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://thatwhy.me/">
+    <meta property="twitter:title" content="ThatWhy - Innovation & Solutions">
+    <meta property="twitter:description" content="Leading provider of IT solutions and business transformation services for forward-thinking businesses.">
+    <meta property="twitter:image" content="https://thatwhy.me/images/og-image.jpg">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:400,700,800&display=swap">
     <style>
         body {
@@ -49,26 +71,18 @@
             color: #fff;
             position: relative;
         }
-        .hero::after {
-            content: '';
-            display: block;
-            position: absolute;
-            bottom: -40px;
-            left: 0;
-            width: 100%;
-            height: 80px;
-            background: url('images/hero-shape.svg') no-repeat center/cover;
-        }
         .hero h1 {
             font-size: 46px;
             margin-bottom: 18px;
             font-weight: 800;
             letter-spacing: 1.5px;
+            animation: fadeInUp 1s ease-out;
         }
         .hero p {
             font-size: 22px;
             opacity: .93;
             margin-bottom: 32px;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
         .cta-button {
             background: linear-gradient(90deg, #e63946 60%, #d62828 100%);
@@ -278,6 +292,23 @@
                 margin-top: 25px;
             }
         }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
@@ -349,16 +380,16 @@
                         Modern user self-service portal for club members (SharePoint, ITSM integration)
                     </div>
                 </div>
-            </div>
-            <div class="works-group">
-                <h3>In Progress</h3>
                 <div class="work-card">
-                    <span class="work-status progress">⏳</span>
+                    <span class="work-status done">✔</span>
                     <div>
-                        <b>KepBo (Kakeibo Budget App)</b><br>
+                        <b><a href="https://kepbo.me" target="_blank" style="color: inherit; text-decoration: none;">KepBo (Kakeibo Budget App)</a></b><br>
                         Multi-language household budgeting app (Mobile-first)
                     </div>
                 </div>
+            </div>
+            <div class="works-group">
+                <h3>In Progress</h3>
                 <div class="work-card">
                     <span class="work-status progress">⏳</span>
                     <div>
@@ -382,12 +413,11 @@
     </main>
     <footer class="footer">
         &copy; 2025 ThatWhy All Rights Reserved.
-        <!--
         <div class="social">
-            <a href="https://www.linkedin.com/" target="_blank" aria-label="LinkedIn">🔗</a>
-            <a href="https://facebook.com/" target="_blank" aria-label="Facebook">📘</a>
+            <a href="https://www.linkedin.com/company/thatwhy" target="_blank" aria-label="LinkedIn">🔗</a>
+            <a href="https://twitter.com/thatwhy" target="_blank" aria-label="Twitter">�</a>
+            <a href="https://github.com/thatwhy" target="_blank" aria-label="GitHub">💻</a>
         </div>
-        -->
     </footer>
 </body>
 </html>
