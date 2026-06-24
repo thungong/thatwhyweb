@@ -3,57 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ThatWhy - IT Solutions & Business Consulting</title>
-    <meta name="description" content="ThatWhy provides professional IT solutions and business transformation services. We specialize in process automation, IT service management, and custom software development.">
-    <meta name="keywords" content="IT solutions, business transformation, process automation, IT service management, custom software, digital transformation">
+    <title>ThatWhy - IT Solutions &amp; Business Consulting</title>
+    <meta name="description" content="ThatWhy delivers professional IT solutions and business transformation services — process automation, IT service management, and custom software development for forward-thinking businesses.">
+    <meta name="keywords" content="IT solutions, business consulting, process automation, IT service management, custom software development, digital transformation, SaaS, web development">
     <meta name="author" content="ThatWhy">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#070d1a">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thatwhy.me/">
-    <meta property="og:title" content="ThatWhy - IT Solutions & Business Consulting">
-    <meta property="og:description" content="Leading provider of IT solutions and business transformation services for forward-thinking businesses.">
+    <meta property="og:title" content="ThatWhy - IT Solutions &amp; Business Consulting">
+    <meta property="og:description" content="Professional IT solutions and business transformation — process automation, ITSM, and custom software development for forward-thinking businesses.">
     <meta property="og:image" content="https://thatwhy.me/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="ThatWhy - IT Solutions &amp; Business Consulting">
     <meta property="og:site_name" content="ThatWhy">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://thatwhy.me/">
-    <meta property="twitter:title" content="ThatWhy - IT Solutions & Business Consulting">
-    <meta property="twitter:description" content="Leading provider of IT solutions and business transformation services for forward-thinking businesses.">
-    <meta property="twitter:image" content="https://thatwhy.me/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://thatwhy.me/">
+    <meta name="twitter:title" content="ThatWhy - IT Solutions &amp; Business Consulting">
+    <meta name="twitter:description" content="Professional IT solutions and business transformation — process automation, ITSM, and custom software development for forward-thinking businesses.">
+    <meta name="twitter:image" content="https://thatwhy.me/og-image.png">
+    <meta name="twitter:image:alt" content="ThatWhy - IT Solutions &amp; Business Consulting">
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     <link rel="canonical" href="https://thatwhy.me/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
 
-    <!-- Structured Data - Organization -->
+    <!-- Structured Data - Organization / ProfessionalService -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": ["Organization", "ProfessionalService"],
         "name": "ThatWhy",
         "url": "https://thatwhy.me",
         "logo": "https://thatwhy.me/favicon.svg",
-        "description": "ThatWhy provides professional IT solutions and business transformation services. We specialize in process automation, IT service management, and custom software development.",
+        "image": "https://thatwhy.me/og-image.png",
+        "description": "ThatWhy delivers professional IT solutions and business transformation services — process automation, IT service management, and custom software development for forward-thinking businesses.",
         "email": "hello@thatwhy.me",
+        "areaServed": "Worldwide",
         "sameAs": ["https://github.com/thungong"],
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "hello@thatwhy.me",
-            "contactType": "customer service"
+            "contactType": "customer service",
+            "availableLanguage": ["English", "Thai"]
         },
-        "knowsAbout": ["IT Solutions","Process Automation","IT Service Management","Custom Software Development","Digital Transformation","Business Consulting"]
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "IT Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Process Automation",
+                        "description": "Streamline business workflows and enhance productivity with comprehensive automation solutions tailored to your operational needs."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "IT Service Management",
+                        "description": "Transform IT operations with proven ITSM frameworks for improved service delivery, reliability, and operational excellence."
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Custom Software Development",
+                        "description": "Design and develop robust, scalable software solutions and digital platforms that enhance user experience and drive business growth."
+                    }
+                }
+            ]
+        },
+        "knowsAbout": ["IT Solutions","Process Automation","IT Service Management","Custom Software Development","Digital Transformation","Business Consulting","SaaS Development","Web Development","Mobile Development","Cloud & DevOps","AI & Automation"]
     }
     </script>
+
+    <!-- Structured Data - WebSite -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "ThatWhy",
         "url": "https://thatwhy.me",
-        "description": "Professional IT Solutions & Business Consulting"
+        "description": "Professional IT Solutions & Business Consulting",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://thatwhy.me/?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+        }
     }
     </script>
 
