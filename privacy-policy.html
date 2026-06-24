@@ -4,267 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - ThatWhy</title>
-    <meta name="description" content="Privacy Policy for ThatWhy IT Solutions & Business Consulting">
+    <meta name="description" content="Privacy Policy for ThatWhy — how we collect, use, and protect your information when you visit our website or use our services.">
+    <meta name="robots" content="noindex, follow">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
-    
+    <link rel="canonical" href="https://thatwhy.me/privacy-policy.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
+
     <style>
         :root {
-            --corporate-blue: #2c5aa0;
-            --accent-blue: #4a90e2;
-            --dark-gray: #2c3e50;
-            --light-gray: #f8f9fa;
-            --medium-gray: #6c757d;
-            --white: #ffffff;
-            --border-gray: #dee2e6;
-            --text-dark: #343a40;
+            --navy:    #070d1a;
+            --primary: #2563eb;
+            --accent:  #38bdf8;
+            --white:   #ffffff;
+            --light:   #f5f7ff;
+            --g100:    #f3f4f6;
+            --g200:    #e5e7eb;
+            --g500:    #6b7280;
+            --g700:    #374151;
+            --g900:    #111827;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-
-        .header {
+            line-height: 1.7;
+            color: var(--g700);
             background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            color: var(--corporate-blue);
-            text-align: center;
-            padding: 2rem 1.5rem 1rem;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            border-bottom: 3px solid var(--corporate-blue);
         }
 
-        .header a {
-            color: var(--corporate-blue);
+        /* NAV */
+        .nav {
+            background: var(--navy);
+            height: 62px;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .nav-logo {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.45rem;
+            font-weight: 800;
+            color: var(--white);
             text-decoration: none;
+            letter-spacing: -0.4px;
         }
+        .nav-logo span { color: var(--accent); }
+        .nav-back {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: var(--accent); }
 
+        /* CONTENT */
         .container {
-            max-width: 900px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 4rem 2rem;
+            padding: 4rem 2rem 6rem;
         }
 
-        h1 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 2.5rem;
-            color: var(--dark-gray);
-            margin-bottom: 1rem;
-            font-weight: 700;
+        .page-title {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--g900);
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
         }
 
         .last-updated {
-            color: var(--medium-gray);
-            font-size: 0.9rem;
-            margin-bottom: 3rem;
-            font-style: italic;
+            font-size: 0.85rem;
+            color: var(--g500);
+            margin-bottom: 2.5rem;
         }
 
         h2 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.75rem;
-            color: var(--corporate-blue);
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--g900);
             margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 1px solid var(--g200);
         }
 
         h3 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 1.25rem;
-            color: var(--dark-gray);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
+            font-size: 1rem;
             font-weight: 600;
+            color: var(--g700);
+            margin-top: 1.4rem;
+            margin-bottom: 0.5rem;
         }
 
-        p {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
+        p { margin-bottom: 1rem; font-size: 0.97rem; }
 
         ul, ol {
             margin-bottom: 1rem;
-            padding-left: 2rem;
+            padding-left: 1.5rem;
         }
-
         li {
-            margin-bottom: 0.5rem;
-            line-height: 1.8;
+            margin-bottom: 0.4rem;
+            font-size: 0.97rem;
         }
 
-        .highlight-box {
-            background: var(--light-gray);
-            border-left: 4px solid var(--corporate-blue);
-            padding: 1.5rem;
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover { text-decoration: underline; }
+
+        .info-box {
+            background: rgba(37,99,235,0.06);
+            border-left: 3px solid var(--primary);
+            padding: 1.25rem 1.5rem;
             margin: 2rem 0;
-            border-radius: 8px;
+            border-radius: 0 8px 8px 0;
         }
+        .info-box p { margin: 0; font-size: 0.95rem; }
 
+        .notice-box {
+            background: rgba(245,158,11,0.07);
+            border-left: 3px solid #f59e0b;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .notice-box p { margin: 0; font-size: 0.95rem; }
+
+        /* FOOTER */
         .footer {
-            background: var(--dark-gray);
-            color: var(--white);
+            background: #050810;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            padding: 1.75rem 5%;
             text-align: center;
-            padding: 2rem;
-            margin-top: 4rem;
         }
-
-        .footer a {
-            color: var(--accent-blue);
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 0.75rem;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: rgba(255,255,255,0.4);
             text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
         }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        .back-link {
-            display: inline-block;
-            margin-bottom: 2rem;
-            color: var(--corporate-blue);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
+        .footer-links a:hover { color: var(--accent); }
+        .footer p { color: rgba(255,255,255,0.25); font-size: 0.82rem; }
 
         @media (max-width: 768px) {
-            .container {
-                padding: 2rem 1rem;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.5rem;
-            }
+            .container { padding: 2.5rem 1.25rem 4rem; }
+            .page-title { font-size: 1.9rem; }
         }
     </style>
 </head>
 <body>
-    <header class="header">
-        <a href="index.html">ThatWhy</a>
-    </header>
+
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">That<span>Why</span></a>
+        <a href="index.html" class="nav-back">← Back to Home</a>
+    </nav>
 
     <div class="container">
-        <a href="index.html" class="back-link">← Back to Home</a>
-        
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: January 15, 2026</p>
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="last-updated">Last Updated: June 24, 2026</p>
 
-        <div class="highlight-box">
-            <p><strong>ThatWhy</strong> ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.</p>
+        <div class="info-box">
+            <p><strong>ThatWhy</strong> ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your personal data — in compliance with applicable privacy laws including the Thailand Personal Data Protection Act B.E. 2562 (PDPA) and the EU General Data Protection Regulation (GDPR) where applicable.</p>
         </div>
 
-        <h2>1. Information We Collect</h2>
-        
-        <h3>1.1 Personal Information</h3>
-        <p>We may collect personal information that you voluntarily provide to us when you:</p>
-        <ul>
-            <li>Contact us via email or contact forms</li>
-            <li>Request information about our services</li>
-            <li>Subscribe to our newsletter or updates</li>
-            <li>Engage our professional services</li>
-        </ul>
-        <p>This information may include:</p>
-        <ul>
-            <li>Name and contact information (email address, phone number)</li>
-            <li>Company name and business information</li>
-            <li>Job title and professional details</li>
-            <li>Communication preferences</li>
-        </ul>
+        <h2>1. About This Website</h2>
+        <p>This website (<strong>thatwhy.me</strong>) is a static informational site. We do not operate any user accounts, login systems, or first-party analytics on this website. The primary ways information reaches us are through direct email contact and infrastructure-level logs maintained by our hosting provider.</p>
 
-        <h3>1.2 Automatically Collected Information</h3>
-        <p>When you visit our website, we may automatically collect certain information about your device, including:</p>
-        <ul>
-            <li>IP address and browser type</li>
-            <li>Operating system and device information</li>
-            <li>Pages visited and time spent on our site</li>
-            <li>Referring website addresses</li>
-            <li>Cookies and similar tracking technologies</li>
-        </ul>
+        <h2>2. Information We Collect</h2>
 
-        <h2>2. How We Use Your Information</h2>
-        <p>We use the information we collect to:</p>
+        <h3>2.1 Information You Provide Directly</h3>
+        <p>When you contact us via email, you may provide:</p>
         <ul>
-            <li>Provide, maintain, and improve our services</li>
-            <li>Respond to your inquiries and provide customer support</li>
-            <li>Send you technical notices, updates, and administrative messages</li>
-            <li>Communicate with you about services, offers, and events</li>
-            <li>Analyze usage patterns and improve website functionality</li>
-            <li>Detect, prevent, and address technical issues and security threats</li>
-            <li>Comply with legal obligations and enforce our terms</li>
+            <li>Your name and email address</li>
+            <li>Company name and professional details</li>
+            <li>The content of your message or inquiry</li>
         </ul>
+        <p>We only receive what you choose to share with us.</p>
 
-        <h2>3. Information Sharing and Disclosure</h2>
-        <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
+        <h3>2.2 Infrastructure &amp; Access Logs</h3>
+        <p>This website is hosted on <strong>Cloudflare Pages</strong>. When you visit, Cloudflare may automatically record standard server log data including:</p>
         <ul>
-            <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and delivering our services</li>
-            <li><strong>Legal Requirements:</strong> We may disclose information if required by law or in response to valid requests by public authorities</li>
-            <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred</li>
-            <li><strong>With Your Consent:</strong> We may share information with your explicit consent</li>
+            <li>IP address and approximate geographic location</li>
+            <li>Browser type and operating system</li>
+            <li>Pages requested and timestamps</li>
+            <li>HTTP referrer headers</li>
+        </ul>
+        <p>These logs are retained and managed by Cloudflare under their own <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Privacy Policy</a>. We do not have direct access to raw server logs.</p>
+
+        <h3>2.3 Third-Party Resources</h3>
+        <p>This website loads fonts from <strong>Google Fonts</strong> (fonts.googleapis.com). When your browser fetches these fonts, Google's servers receive your IP address and browser information. Please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> for details. We do not use advertising networks, social media pixels, or behavioral tracking tools.</p>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>Information you provide through email contact is used solely to:</p>
+        <ul>
+            <li>Respond to your inquiry or service request</li>
+            <li>Communicate about a potential or ongoing engagement</li>
+            <li>Comply with legal obligations</li>
+        </ul>
+        <p>We do not use your contact information for unsolicited marketing.</p>
+
+        <h2>4. Legal Basis for Processing (GDPR)</h2>
+        <p>For visitors in the European Economic Area, our legal basis for processing personal data is:</p>
+        <ul>
+            <li><strong>Legitimate interests</strong> — responding to your direct inquiry</li>
+            <li><strong>Contractual necessity</strong> — when processing relates to a service engagement</li>
+            <li><strong>Legal obligation</strong> — where required by applicable law</li>
         </ul>
 
-        <h2>4. Data Security</h2>
-        <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-
-        <h2>5. Cookies and Tracking Technologies</h2>
-        <p>We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences. Please note that disabling cookies may affect the functionality of our website.</p>
-
-        <h2>6. Your Rights and Choices</h2>
-        <p>You have the following rights regarding your personal information:</p>
+        <h2>5. Data Sharing and Disclosure</h2>
+        <p>We do not sell, rent, or trade your personal information. We may share information only in these circumstances:</p>
         <ul>
-            <li><strong>Access:</strong> Request access to your personal information</li>
-            <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
-            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
-            <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
-            <li><strong>Data Portability:</strong> Request a copy of your data in a portable format</li>
+            <li><strong>Infrastructure providers:</strong> Cloudflare (hosting), as described above</li>
+            <li><strong>Legal requirements:</strong> If required by law, court order, or governmental authority</li>
+            <li><strong>Business transfers:</strong> In the event of a merger or acquisition, with appropriate notice</li>
         </ul>
-        <p>To exercise these rights, please contact us at <a href="mailto:privacy@thatwhy.me">privacy@thatwhy.me</a></p>
 
-        <h2>7. Third-Party Links</h2>
-        <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+        <h2>6. Cookies</h2>
+        <p>This website does not set any first-party cookies. Third-party services (Google Fonts, Cloudflare) may set cookies or use similar technologies as part of their infrastructure. You can manage cookie preferences through your browser settings.</p>
 
-        <h2>8. Children's Privacy</h2>
-        <p>Our services are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.</p>
+        <h2>7. Data Retention</h2>
+        <p>Email correspondence is retained for as long as necessary for the business purpose it was collected for, or as required by law. You may request deletion at any time.</p>
 
-        <h2>9. International Data Transfers</h2>
-        <p>Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place to protect your information in accordance with this Privacy Policy.</p>
+        <h2>8. Your Rights</h2>
+        <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+        <ul>
+            <li><strong>Access</strong> — request a copy of information we hold about you</li>
+            <li><strong>Rectification</strong> — request correction of inaccurate data</li>
+            <li><strong>Erasure</strong> — request deletion of your personal data</li>
+            <li><strong>Restriction</strong> — request that we limit processing of your data</li>
+            <li><strong>Portability</strong> — receive your data in a portable format</li>
+            <li><strong>Objection</strong> — object to processing based on legitimate interests</li>
+            <li><strong>Withdraw consent</strong> — where processing is based on consent</li>
+        </ul>
+        <p>Under Thailand's PDPA, you additionally have the right to be informed when your personal data is processed and to lodge a complaint with the Personal Data Protection Committee (PDPC).</p>
+        <p>To exercise any of these rights, contact us at <a href="mailto:privacy@thatwhy.me">privacy@thatwhy.me</a>. We will respond within 30 days.</p>
 
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. Your continued use of our services after any changes indicates your acceptance of the updated policy.</p>
+        <h2>9. Children's Privacy</h2>
+        <p>Our services are not directed to individuals under 20 years of age (in accordance with Thailand's PDPA) or 18 in other jurisdictions. We do not knowingly collect personal data from minors. If you believe we have inadvertently received data from a minor, please contact us to have it removed.</p>
 
-        <h2>11. Contact Us</h2>
-        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
-        <div class="highlight-box">
+        <h2>10. International Data Transfers</h2>
+        <p>Your information may be processed or stored in countries outside your country of residence. We ensure appropriate safeguards are in place, including relying on service providers with adequate data protection standards.</p>
+
+        <h2>11. Security</h2>
+        <p>We rely on Cloudflare's enterprise-grade infrastructure for security. Email communications are standard internet email. No method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+        <h2>12. Third-Party Links</h2>
+        <p>Our website contains links to external sites (GitHub, portfolio projects). We are not responsible for the privacy practices of those sites. Please review their privacy policies independently.</p>
+
+        <h2>13. Updates to This Policy</h2>
+        <p>We may update this Privacy Policy as our practices evolve. Material changes will be reflected by updating the "Last Updated" date at the top of this page. Continued use of our website after updates constitutes acceptance of the revised policy.</p>
+
+        <h2>14. Contact</h2>
+        <div class="info-box">
             <p><strong>ThatWhy</strong><br>
-            Email: <a href="mailto:privacy@thatwhy.me">privacy@thatwhy.me</a><br>
-            General Inquiries: <a href="mailto:hello@thatwhy.me">hello@thatwhy.me</a></p>
+            Privacy inquiries: <a href="mailto:privacy@thatwhy.me">privacy@thatwhy.me</a><br>
+            General: <a href="mailto:hello@thatwhy.me">hello@thatwhy.me</a></p>
         </div>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2026 ThatWhy. All Rights Reserved.</p>
-        <p>
-            <a href="index.html">Home</a> | 
-            <a href="privacy-policy.html">Privacy Policy</a> | 
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms-of-use.html">Terms of Use</a>
-        </p>
+        </div>
+        <p>&copy; 2026 ThatWhy. All Rights Reserved.</p>
     </footer>
+
 </body>
 </html>
