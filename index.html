@@ -7,7 +7,7 @@
     <meta name="description" content="ThatWhy provides professional IT solutions and business transformation services. We specialize in process automation, IT service management, and custom software development.">
     <meta name="keywords" content="IT solutions, business transformation, process automation, IT service management, custom software, digital transformation">
     <meta name="author" content="ThatWhy">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://thatwhy.me/">
@@ -16,17 +16,17 @@
     <meta property="og:image" content="https://thatwhy.me/og-image.png">
     <meta property="og:site_name" content="ThatWhy">
     <meta property="og:locale" content="en_US">
-    
+
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://thatwhy.me/">
     <meta property="twitter:title" content="ThatWhy - IT Solutions & Business Consulting">
     <meta property="twitter:description" content="Leading provider of IT solutions and business transformation services for forward-thinking businesses.">
     <meta property="twitter:image" content="https://thatwhy.me/og-image.png">
-    
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="canonical" href="https://thatwhy.me/">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap">
 
     <!-- Structured Data - Organization -->
     <script type="application/ld+json">
@@ -38,26 +38,15 @@
         "logo": "https://thatwhy.me/favicon.svg",
         "description": "ThatWhy provides professional IT solutions and business transformation services. We specialize in process automation, IT service management, and custom software development.",
         "email": "hello@thatwhy.me",
-        "sameAs": [
-            "https://github.com/thungong"
-        ],
+        "sameAs": ["https://github.com/thungong"],
         "contactPoint": {
             "@type": "ContactPoint",
             "email": "hello@thatwhy.me",
             "contactType": "customer service"
         },
-        "knowsAbout": [
-            "IT Solutions",
-            "Process Automation",
-            "IT Service Management",
-            "Custom Software Development",
-            "Digital Transformation",
-            "Business Consulting"
-        ]
+        "knowsAbout": ["IT Solutions","Process Automation","IT Service Management","Custom Software Development","Digital Transformation","Business Consulting"]
     }
     </script>
-
-    <!-- Structured Data - WebSite -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -67,638 +56,1040 @@
         "description": "Professional IT Solutions & Business Consulting"
     }
     </script>
-    
+
     <style>
         :root {
-            --corporate-blue: #2c5aa0;
-            --accent-blue: #4a90e2;
-            --dark-gray: #2c3e50;
-            --light-gray: #f8f9fa;
-            --medium-gray: #6c757d;
-            --white: #ffffff;
-            --border-gray: #dee2e6;
-            --text-dark: #343a40;
-            --success-green: #28a745;
-            --warning-orange: #ffc107;
+            --navy:        #070d1a;
+            --dark:        #0d1630;
+            --primary:     #2563eb;
+            --primary-dk:  #1d4ed8;
+            --accent:      #38bdf8;
+            --purple:      #818cf8;
+            --green:       #10b981;
+            --orange:      #f59e0b;
+            --white:       #ffffff;
+            --light:       #f5f7ff;
+            --g50:         #f9fafb;
+            --g100:        #f3f4f6;
+            --g200:        #e5e7eb;
+            --g400:        #9ca3af;
+            --g500:        #6b7280;
+            --g700:        #374151;
+            --g900:        #111827;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-dark);
-            background-color: var(--white);
-        }
-
-        .header {
+            color: var(--g700);
             background: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            color: var(--corporate-blue);
-            text-align: center;
-            padding: 2rem 1.5rem 1rem;
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 2rem;
-            font-weight: 700;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 3px solid var(--corporate-blue);
+            overflow-x: hidden;
         }
 
-        .navbar {
+        /* ── NAV ─────────────────────────────────────────── */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            height: 68px;
+            padding: 0 5%;
             display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background: var(--corporate-blue);
-            padding: 1rem;
-            flex-wrap: wrap;
-            position: sticky;
-            top: 85px;
-            z-index: 99;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+        .nav.scrolled {
+            background: rgba(7, 13, 26, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 30px rgba(0,0,0,0.35);
         }
 
-        .navbar a {
+        .nav-logo {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.55rem;
+            font-weight: 800;
             color: var(--white);
             text-decoration: none;
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
+            letter-spacing: -0.5px;
+        }
+        .nav-logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 0.25rem;
+            list-style: none;
+            align-items: center;
+        }
+        .nav-links a {
+            color: rgba(255,255,255,0.78);
+            text-decoration: none;
+            font-size: 0.92rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            border-radius: 5px;
+            padding: 0.45rem 0.9rem;
+            border-radius: 7px;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.09); }
+        .nav-links .nav-cta {
+            background: var(--primary);
+            color: var(--white) !important;
+            padding: 0.5rem 1.2rem !important;
+            border-radius: 8px !important;
+            margin-left: 0.5rem;
+        }
+        .nav-links .nav-cta:hover { background: var(--primary-dk) !important; }
+
+        .nav-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .nav-toggle span {
+            width: 24px; height: 2px;
+            background: var(--white);
+            border-radius: 2px;
+            transition: all 0.3s;
+            display: block;
         }
 
-        .navbar a:hover,
-        .navbar a:focus {
-            background: rgba(255, 255, 255, 0.2);
-            color: var(--white);
-            outline: none;
-        }
-
+        /* ── HERO ─────────────────────────────────────────── */
         .hero {
+            min-height: 100vh;
+            background: linear-gradient(145deg, #070d1a 0%, #0d1b3e 55%, #130d30 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 6rem 2rem 5rem;
-            background: linear-gradient(135deg, var(--light-gray) 0%, var(--white) 100%);
+            padding: 8rem 5% 6rem;
             position: relative;
+            overflow: hidden;
         }
-
-        .hero::before {
-            content: '';
+        .hero-glow-1 {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23e9ecef" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            width: 700px; height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 65%);
+            top: -120px; right: -120px;
+            pointer-events: none;
+        }
+        .hero-glow-2 {
+            position: absolute;
+            width: 500px; height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(129,140,248,0.13) 0%, transparent 65%);
+            bottom: -80px; left: -80px;
+            pointer-events: none;
+        }
+        .hero-glow-3 {
+            position: absolute;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(56,189,248,0.1) 0%, transparent 65%);
+            top: 40%; left: 15%;
             pointer-events: none;
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
+            max-width: 820px;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(37,99,235,0.15);
+            border: 1px solid rgba(56,189,248,0.3);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 0.4rem 1.1rem;
+            border-radius: 100px;
+            margin-bottom: 2rem;
+            letter-spacing: 0.3px;
         }
 
         .hero h1 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 700;
-            color: var(--dark-gray);
-            line-height: 1.2;
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: clamp(2.6rem, 6.5vw, 4.8rem);
+            font-weight: 800;
+            color: var(--white);
+            line-height: 1.08;
+            margin-bottom: 1.6rem;
+        }
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .hero p {
-            font-size: 1.25rem;
-            color: var(--medium-gray);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.65);
+            max-width: 580px;
+            margin: 0 auto 2.8rem;
+            line-height: 1.75;
         }
 
-        .cta-button {
-            background: var(--corporate-blue);
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-primary {
+            background: var(--primary);
             color: var(--white);
-            padding: 1rem 2.5rem;
-            font-size: 1.1rem;
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+            border-radius: 10px;
+            transition: all 0.25s;
+            box-shadow: 0 4px 20px rgba(37,99,235,0.4);
         }
-
-        .cta-button:hover {
-            background: var(--accent-blue);
+        .btn-primary:hover {
+            background: var(--primary-dk);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(44, 90, 160, 0.4);
+            box-shadow: 0 8px 28px rgba(37,99,235,0.5);
+        }
+        .btn-outline {
+            background: rgba(255,255,255,0.07);
+            color: var(--white);
+            padding: 0.85rem 2rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.18);
+            transition: all 0.25s;
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateY(-2px);
         }
 
-        .content {
-            padding: 4rem 8%;
-            max-width: 1200px;
+        /* scroll chevron */
+        .hero-scroll {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgba(255,255,255,0.3);
+            font-size: 1.4rem;
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50%       { transform: translateX(-50%) translateY(6px); }
+        }
+
+        /* ── STATS BAR ────────────────────────────────────── */
+        .stats-bar {
+            background: var(--g900);
+            padding: 2.5rem 5%;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .stats-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            text-align: center;
+        }
+        .stat-item .num {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--accent);
+            line-height: 1;
+        }
+        .stat-item .lbl {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.45);
+            margin-top: 0.35rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* ── SHARED SECTION ───────────────────────────────── */
+        .section {
+            padding: 6rem 5%;
+        }
+        .section-inner {
+            max-width: 1180px;
             margin: 0 auto;
         }
-
-        h2 {
-            font-family: 'Source Sans Pro', sans-serif;
-            font-size: 2.5rem;
-            color: var(--dark-gray);
-            margin: 3rem 0 2rem;
+        .section-hdr {
             text-align: center;
-            font-weight: 600;
-            position: relative;
+            margin-bottom: 3.5rem;
+        }
+        .section-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+        .section-hdr h2 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+            font-weight: 800;
+            color: var(--g900);
+            line-height: 1.18;
+        }
+        .section-hdr p {
+            font-size: 1.05rem;
+            color: var(--g500);
+            margin-top: 0.9rem;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-blue);
-            margin: 1rem auto;
-            border-radius: 2px;
-        }
+        /* ── ABOUT ────────────────────────────────────────── */
+        #about { background: var(--light); }
 
-        .services {
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 2px solid var(--border-gray);
-            border-radius: 12px;
-            padding: 2.5rem 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: var(--accent-blue);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--light-gray);
-            border-radius: 50%;
-            display: flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: var(--corporate-blue);
-            transition: all 0.3s ease;
         }
-
-        .service-card:hover .service-icon {
-            background: var(--corporate-blue);
-            color: var(--white);
+        .about-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary);
+            margin-bottom: 0.85rem;
         }
-
-        .service-card h3 {
-            color: var(--dark-gray);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
+        .about-grid h2 {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--g900);
+            line-height: 1.2;
+            margin-bottom: 1.2rem;
         }
-
-        .service-card p {
-            color: var(--medium-gray);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .works {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .works-group {
-            background: var(--light-gray);
-            border-radius: 12px;
-            padding: 2rem;
-        }
-
-        .works-group h3 {
-            color: var(--corporate-blue);
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-            border-bottom: 2px solid var(--accent-blue);
-            padding-bottom: 0.5rem;
-        }
-
-        .work-card {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            background: var(--white);
-            border: 1px solid var(--border-gray);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-
-        .work-card:hover {
-            transform: translateX(5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .work-status {
-            font-size: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-width: 40px;
-        }
-
-        .work-status.done {
-            color: var(--success-green);
-        }
-
-        .work-status.progress {
-            color: var(--warning-orange);
-        }
-
-        .work-card > div {
-            flex: 1;
-        }
-
-        .work-card b {
-            color: var(--dark-gray);
-            font-weight: 600;
-            display: block;
-            margin-bottom: 0.25rem;
-        }
-
-        .work-card .description {
-            color: var(--medium-gray);
-            font-size: 0.9rem;
-        }
-
-        .why {
-            margin: 4rem auto 0;
-            max-width: 800px;
-            background: var(--white);
-            border: 2px solid var(--border-gray);
-            border-radius: 12px;
-            padding: 3rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        }
-
-        .why h2 {
-            margin-top: 0;
-            color: var(--corporate-blue);
-        }
-
-        .why p {
-            color: var(--text-dark);
+        .about-grid p {
+            color: var(--g500);
+            font-size: 1.02rem;
             line-height: 1.8;
-            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        .about-checks {
+            display: flex;
+            flex-direction: column;
+            gap: 0.7rem;
+        }
+        .about-check {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--g700);
+        }
+        .check-icon {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: rgba(37,99,235,0.12);
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 700;
+            flex-shrink: 0;
         }
 
-        .why strong {
-            color: var(--corporate-blue);
+        .about-visual {
+            background: linear-gradient(145deg, #1e3a8a 0%, #312e81 100%);
+            border-radius: 20px;
+            padding: 2.5rem;
+            min-height: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+        .about-visual-label {
+            font-size: 0.72rem;
+            color: rgba(255,255,255,0.4);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+        .tech-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .tech-tag {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.85);
+            padding: 0.4rem 0.85rem;
+            border-radius: 7px;
+            font-size: 0.83rem;
+            font-weight: 500;
+        }
+
+        /* ── SERVICES ─────────────────────────────────────── */
+        #services { background: var(--white); }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+        .svc-card {
+            background: var(--white);
+            border: 1px solid var(--g200);
+            border-radius: 16px;
+            padding: 2.25rem 2rem;
+            transition: all 0.3s;
+            box-shadow: 0 1px 10px rgba(0,0,0,0.04);
+        }
+        .svc-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0,0,0,0.1);
+            border-color: rgba(37,99,235,0.35);
+        }
+        .svc-icon {
+            width: 54px; height: 54px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.4rem;
+        }
+        .svc-icon svg { width: 26px; height: 26px; }
+        .svc-icon.blue   { background: rgba(37,99,235,0.1);   color: #2563eb; }
+        .svc-icon.purple { background: rgba(129,140,248,0.12); color: #818cf8; }
+        .svc-icon.cyan   { background: rgba(6,182,212,0.1);   color: #0891b2; }
+
+        .svc-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--g900);
+            margin-bottom: 0.7rem;
+        }
+        .svc-card p {
+            color: var(--g500);
+            font-size: 0.93rem;
+            line-height: 1.7;
+        }
+
+        /* ── PORTFOLIO ────────────────────────────────────── */
+        #works { background: var(--light); }
+
+        .portfolio-legend {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.83rem;
+            color: var(--g500);
+            font-weight: 500;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+            gap: 1.25rem;
+        }
+        .proj-card {
+            background: var(--white);
+            border: 1px solid var(--g200);
+            border-radius: 14px;
+            padding: 1.4rem 1.5rem;
+            transition: all 0.3s;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+        }
+        .proj-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 28px rgba(0,0,0,0.09);
+            border-color: rgba(37,99,235,0.28);
+        }
+        .proj-top {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            margin-bottom: 0.6rem;
+        }
+        .dot {
+            width: 9px; height: 9px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+        .dot.done     { background: var(--green); }
+        .dot.progress { background: var(--orange); animation: blink 2.2s ease-in-out infinite; }
+        .dot.concept  { background: var(--accent); }
+        @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.35} }
+
+        .proj-name {
+            font-size: 0.97rem;
             font-weight: 600;
+            color: var(--g900);
+            line-height: 1.35;
         }
+        .proj-name a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .proj-name a:hover { color: var(--primary); }
 
-        .footer {
-            background: var(--dark-gray);
+        .proj-desc {
+            font-size: 0.84rem;
+            color: var(--g400);
+            line-height: 1.6;
+            padding-left: 1.8rem;
+        }
+        .proj-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.18rem 0.55rem;
+            border-radius: 4px;
+            margin-top: 0.65rem;
+            margin-left: 1.8rem;
+        }
+        .badge-done     { background: rgba(16,185,129,0.1);  color: #059669; }
+        .badge-progress { background: rgba(245,158,11,0.1);  color: #d97706; }
+        .badge-concept  { background: rgba(56,189,248,0.12); color: #0284c7; }
+
+        /* ── WHY ──────────────────────────────────────────── */
+        #why { background: var(--white); }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        .why-card {
+            background: var(--light);
+            border: 1px solid var(--g200);
+            border-radius: 14px;
+            padding: 2rem;
+            transition: border-color 0.25s;
+        }
+        .why-card:hover { border-color: var(--primary); }
+        .why-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #2563eb, #4f46e5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.1rem;
             color: var(--white);
-            text-align: center;
-            padding: 3rem 2rem;
-            margin-top: 4rem;
+        }
+        .why-icon svg { width: 22px; height: 22px; }
+        .why-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--g900);
+            margin-bottom: 0.5rem;
+        }
+        .why-card p {
+            font-size: 0.92rem;
+            color: var(--g500);
+            line-height: 1.7;
         }
 
-        .footer .social {
-            margin-top: 1.5rem;
+        /* ── CONTACT ──────────────────────────────────────── */
+        #contact {
+            background: linear-gradient(145deg, #070d1a 0%, #0d1b3e 100%);
+            text-align: center;
+        }
+        #contact .section-tag { color: var(--accent); }
+        #contact .section-hdr h2 { color: var(--white); }
+        #contact .section-hdr p  { color: rgba(255,255,255,0.55); }
+
+        .contact-card {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.25rem;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2.5rem 3rem;
+            margin-top: 0.5rem;
+        }
+        .contact-card p {
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        .contact-email-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.25s;
+            box-shadow: 0 4px 20px rgba(37,99,235,0.35);
+        }
+        .contact-email-link:hover {
+            background: var(--primary-dk);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(37,99,235,0.5);
+        }
+
+        /* ── FOOTER ───────────────────────────────────────── */
+        .footer {
+            background: #050810;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            padding: 2rem 5%;
+            text-align: center;
+        }
+        .footer-links {
             display: flex;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
+            margin-bottom: 0.85rem;
+            flex-wrap: wrap;
         }
-
-        .footer .social a {
-            color: var(--white);
-            font-size: 1.5rem;
-            opacity: 0.7;
-            transition: all 0.3s ease;
+        .footer-links a {
+            color: rgba(255,255,255,0.38);
             text-decoration: none;
-            padding: 0.5rem;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: var(--accent); }
+        .footer p {
+            color: rgba(255,255,255,0.25);
+            font-size: 0.82rem;
         }
 
-        .footer .social a:hover {
+        /* ── FADE-UP ANIMATION ────────────────────────────── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
             opacity: 1;
-            background: var(--corporate-blue);
-            transform: translateY(-2px);
+            transform: none;
+        }
+        .fade-up.d1 { transition-delay: 0.1s; }
+        .fade-up.d2 { transition-delay: 0.2s; }
+        .fade-up.d3 { transition-delay: 0.3s; }
+
+        /* ── RESPONSIVE ───────────────────────────────────── */
+        @media (max-width: 900px) {
+            .about-grid    { grid-template-columns: 1fr; gap: 2.5rem; }
+            .services-grid { grid-template-columns: 1fr; }
+            .why-grid      { grid-template-columns: 1fr; }
         }
 
-        /* Contact section */
-        .contact-info {
-            text-align: center;
-            background: var(--light-gray);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2rem 0;
-        }
-
-        .contact-info a {
-            color: var(--corporate-blue);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .header {
-                font-size: 1.5rem;
-                padding: 1.5rem 1rem;
-            }
-
-            .navbar {
+            .nav-links { display: none; }
+            .nav-toggle { display: flex; }
+            .nav-links.open {
+                display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
-                padding: 1rem;
-                top: 70px;
+                position: absolute;
+                top: 68px; left: 0; right: 0;
+                background: rgba(7,13,26,0.98);
+                backdrop-filter: blur(12px);
+                padding: 1.25rem 5%;
+                gap: 0.4rem;
             }
-
-            .navbar a {
-                text-align: center;
-                padding: 0.75rem;
-            }
-
-            .hero {
-                padding: 4rem 1rem 3rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero p {
-                font-size: 1.1rem;
-            }
-
-            .content {
-                padding: 2rem 5%;
-            }
-
-            h2 {
-                font-size: 2rem;
-                margin: 2rem 0 1.5rem;
-            }
-
-            .services {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .works {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .why {
-                padding: 2rem;
-                margin: 2rem auto 0;
-            }
+            .stats-inner { grid-template-columns: repeat(2, 1fr); }
+            .portfolio-grid { grid-template-columns: 1fr; }
+            .contact-card { padding: 2rem 1.5rem; }
+            .section { padding: 4rem 5%; }
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        @media (max-width: 480px) {
+            .stats-inner { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
         }
 
-        /* Focus styles for accessibility */
-        *:focus {
-            outline: 2px solid var(--accent-blue);
-            outline-offset: 2px;
+        /* accessibility focus */
+        *:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
     </style>
 </head>
 <body>
-    <header class="header">ThatWhy</header>
-    
-    <nav class="navbar" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#works">Portfolio</a>
-        <a href="#why">Why Choose Us</a>
-        <a href="#contact">Contact</a>
+
+    <!-- NAV -->
+    <nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a href="#" class="nav-logo">That<span>Why</span></a>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#works">Portfolio</a></li>
+            <li><a href="#why">Why Us</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
-    <section class="hero">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+        <div class="hero-glow-3"></div>
         <div class="hero-content">
-            <h1>Professional IT Solutions</h1>
-            <p>Your trusted partner for digital transformation and innovative technology solutions that drive business success.</p>
-            <a href="#contact" class="cta-button">Get Started Today</a>
+            <div class="hero-badge"><svg width="13" height="13" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg> Building the future of IT</div>
+            <h1>Professional <span class="gradient-text">IT Solutions</span><br>for Modern Business</h1>
+            <p>Your trusted partner for digital transformation, process automation, and innovative technology solutions that drive real business success.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary">Get Started Today</a>
+                <a href="#works" class="btn-outline">View Our Work</a>
+            </div>
+        </div>
+        <div class="hero-scroll" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg></div>
+    </section>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar" aria-label="Key stats">
+        <div class="stats-inner">
+            <div class="stat-item fade-up">
+                <div class="num">14+</div>
+                <div class="lbl">Projects Shipped</div>
+            </div>
+            <div class="stat-item fade-up d1">
+                <div class="num">5</div>
+                <div class="lbl">In Active Development</div>
+            </div>
+            <div class="stat-item fade-up d2">
+                <div class="num">3</div>
+                <div class="lbl">Core Services</div>
+            </div>
+            <div class="stat-item fade-up d3">
+                <div class="num">100%</div>
+                <div class="lbl">Client Focused</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div>
+                    <div class="about-eyebrow">About ThatWhy</div>
+                    <h2>Transforming businesses through technology</h2>
+                    <p>ThatWhy is a leading provider of professional IT solutions and business transformation services. We deliver innovative digital experiences and strategic technology consulting for forward-thinking organizations across various industries.</p>
+                    <div class="about-checks">
+                        <div class="about-check"><span class="check-icon">✓</span>Tailored solutions for your unique needs</div>
+                        <div class="about-check"><span class="check-icon">✓</span>Scalable from startup to enterprise</div>
+                        <div class="about-check"><span class="check-icon">✓</span>Cutting-edge technologies & best practices</div>
+                        <div class="about-check"><span class="check-icon">✓</span>Long-term partnership approach</div>
+                    </div>
+                </div>
+                <div class="about-visual fade-up">
+                    <div class="about-visual-label">Technologies we work with</div>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Cloud &amp; DevOps</span>
+                        <span class="tech-tag">AI &amp; Automation</span>
+                        <span class="tech-tag">Mobile &amp; Web</span>
+                        <span class="tech-tag">Security</span>
+                        <span class="tech-tag">Analytics &amp; BI</span>
+                        <span class="tech-tag">Integrations</span>
+                        <span class="tech-tag">Databases</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">ITSM</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <main class="content">
-        <section id="about">
-            <h2>About Our Company</h2>
-            <p>ThatWhy is a leading provider of professional IT solutions and business transformation services. We deliver innovative digital experiences and strategic technology consulting for forward-thinking organizations across various industries.</p>
-        </section>
-
-        <section id="services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
+    <!-- SERVICES -->
+    <section class="section" id="services">
+        <div class="section-inner">
+            <div class="section-hdr">
+                <span class="section-tag">What We Do</span>
+                <h2>Services built for impact</h2>
+                <p>We combine deep technical expertise with business acumen to deliver solutions that make a real difference.</p>
+            </div>
+            <div class="services-grid">
+                <div class="svc-card fade-up">
+                    <div class="svc-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49M7.76 7.76a6 6 0 0 0 0 8.49"/></svg></div>
                     <h3>Process Automation</h3>
-                    <p>Streamline your business workflows and enhance productivity with our comprehensive automation solutions tailored to your specific operational needs.</p>
+                    <p>Streamline your business workflows and enhance productivity with comprehensive automation solutions tailored to your specific operational needs.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
+                <div class="svc-card fade-up d1">
+                    <div class="svc-icon purple"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.375 2.25c-1.035 0-1.875.84-1.875 1.875v15.75c0 1.035.84 1.875 1.875 1.875h.75c1.035 0 1.875-.84 1.875-1.875V4.125c0-1.036-.84-1.875-1.875-1.875h-.75ZM9.75 8.625c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.035-.84 1.875-1.875 1.875h-.75a1.875 1.875 0 0 1-1.875-1.875V8.625ZM3 13.125c0-1.036.84-1.875 1.875-1.875h.75c1.036 0 1.875.84 1.875 1.875v6.75c0 1.035-.84 1.875-1.875 1.875h-.75A1.875 1.875 0 0 1 3 19.875v-6.75Z"/></svg></div>
                     <h3>IT Service Management</h3>
-                    <p>Transform your IT operations with our proven ITSM frameworks, ensuring improved service delivery, reliability, and operational excellence.</p>
+                    <p>Transform your IT operations with proven ITSM frameworks, ensuring improved service delivery, reliability, and operational excellence.</p>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">💼</div>
+                <div class="svc-card fade-up d2">
+                    <div class="svc-icon cyan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="12" y1="2" x2="12" y2="22" transform="rotate(15 12 12)"/></svg></div>
                     <h3>Custom Software Development</h3>
                     <p>Design and develop robust, scalable software solutions and digital platforms that enhance user experience and drive business growth.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="works">
-            <h2>Our Portfolio</h2>
-            <div class="works">
-                <div class="works-group">
-                    <h3>Completed Projects</h3>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b><a href="https://kepbo.me" target="_blank" style="color: inherit; text-decoration: none;">KepBo Budget Application</a></b>
-                            <div class="description">Mindful budgeting app inspired by Kakeibo philosophy — multi-language, mobile-first, cloud-synced</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>Spendora Application</b>
-                            <div class="description">Personal time tracking web application with subscription billing</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>TimeTagger SaaS Platform</b>
-                            <div class="description">Comprehensive activity and productivity analytics solution for teams</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>IT Operations Automation</b>
-                            <div class="description">Automated ticketing and reporting system for hospitality sector</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>IT Service Portal</b>
-                            <div class="description">Modern self-service portal for club members</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>Chartly — Smart Trader (AeyStock)</b>
-                            <div class="description">TradingView-style charting app with block-based volume analytics, trend detection, and AI market narrative engine</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>Mor-Aey (หมอเอ๋)</b>
-                            <div class="description">Thai lotto analytics SaaS — statistical analysis, heatmaps, gap analysis, backtesting with 15-20 years of data</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b>Matters</b>
-                            <div class="description">Smart task management app powered by Eisenhower Matrix logic — focus on what matters today</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status done">✓</span>
-                        <div>
-                            <b><a href="https://justnextup.com" target="_blank" style="color: inherit; text-decoration: none;">NextUp</a></b>
-                            <div class="description">Work continuity PWA — multi-tenant SaaS for seamless shift handovers with RBAC, file attachments, and billing</div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="works-group">
-                    <h3>Current Projects</h3>
-                    <div class="work-card">
-                        <span class="work-status progress">⏳</span>
-                        <div>
-                            <b>ClubConnect</b>
-                            <div class="description">Social presence platform for hospitality & nightlife — HeatUp (B2C dating/social) + Club-Web (B2B venue management)</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status progress">⏳</span>
-                        <div>
-                            <b>WeGang (RideBuddy)</b>
-                            <div class="description">GPS tracking & trip planning app with live location sharing, POI, and expense tracking</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status progress">⏳</span>
-                        <div>
-                            <b>TheCoach</b>
-                            <div class="description">Real-time multilingual translation system for sports coaches — speech-to-text across 8+ languages for multicultural teams</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status progress">⏳</span>
-                        <div>
-                            <b>TripsPulse</b>
-                            <div class="description">B2B SaaS for hospitality — AI-powered guest review analytics, sentiment insights, and reputation management</div>
-                        </div>
-                    </div>
-                    <div class="work-card">
-                        <span class="work-status progress">⏳</span>
-                        <div>
-                            <b>Do9ood</b>
-                            <div class="description">Social platform for everyday kindness — "LinkedIn of goodness" where good deeds are visible, verifiable, and rewarded</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="works-group">
-                    <h3>Concept & Planning</h3>
-                    <div class="work-card">
-                        <span class="work-status" style="color: var(--accent-blue);">💡</span>
-                        <div>
-                            <b>VDR (Virtual Data Room)</b>
-                            <div class="description">Secure, governance-first document sharing platform for audits, legal reviews, and vendor due diligence — audit-ready & fully traceable</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="why" id="why">
-            <h2>Why Choose ThatWhy?</h2>
-            <p>
-                <strong>✓ Strategic Approach:</strong> Every solution is built around your specific business objectives and requirements.<br><br>
-                <strong>✓ Scalable Solutions:</strong> We design systems that grow with your business - from startup to enterprise level.<br><br>
-                <strong>✓ Client-Focused Service:</strong> We prioritize long-term partnerships and measurable business impact.<br><br>
-                <strong>✓ Cutting-Edge Technology:</strong> We leverage the latest technologies while maintaining a focus on practical, results-driven solutions.
-            </p>
         </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <p>Ready to transform your business with professional IT solutions?</p>
-                <p><a href="mailto:hello@thatwhy.me">hello@thatwhy.me</a></p>
+    <!-- PORTFOLIO -->
+    <section class="section" id="works">
+        <div class="section-inner">
+            <div class="section-hdr">
+                <span class="section-tag">Our Work</span>
+                <h2>Projects we're proud of</h2>
+                <p>From startup MVPs to enterprise SaaS platforms — here's what we've built.</p>
             </div>
-        </section>
-    </main>
 
+            <div class="portfolio-legend">
+                <span class="legend-item"><span class="dot done"></span>Launched</span>
+                <span class="legend-item"><span class="dot progress"></span>In Progress</span>
+                <span class="legend-item"><span class="dot concept"></span>Concept</span>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Completed -->
+                <div class="proj-card fade-up">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name"><a href="https://kepbo.me" target="_blank" rel="noopener">KepBo Budget Application</a></div>
+                    </div>
+                    <div class="proj-desc">Mindful budgeting app inspired by Kakeibo philosophy — multi-language, mobile-first, cloud-synced</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d1">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">Spendora Application</div>
+                    </div>
+                    <div class="proj-desc">Personal time tracking web application with subscription billing</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d2">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">TimeTagger SaaS Platform</div>
+                    </div>
+                    <div class="proj-desc">Comprehensive activity and productivity analytics solution for teams</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">IT Operations Automation</div>
+                    </div>
+                    <div class="proj-desc">Automated ticketing and reporting system for hospitality sector</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d1">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">IT Service Portal</div>
+                    </div>
+                    <div class="proj-desc">Modern self-service portal for club members</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d2">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">Chartly — Smart Trader (AeyStock)</div>
+                    </div>
+                    <div class="proj-desc">TradingView-style charting app with block-based volume analytics, trend detection, and AI market narrative engine</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">Mor-Aey (หมอเอ๋)</div>
+                    </div>
+                    <div class="proj-desc">Thai lotto analytics SaaS — statistical analysis, heatmaps, gap analysis, backtesting with 15–20 years of data</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d1">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name">Matters</div>
+                    </div>
+                    <div class="proj-desc">Smart task management app powered by Eisenhower Matrix logic — focus on what matters today</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <div class="proj-card fade-up d2">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name"><a href="https://justnextup.com" target="_blank" rel="noopener">NextUp</a></div>
+                    </div>
+                    <div class="proj-desc">Work continuity PWA — multi-tenant SaaS for seamless shift handovers with RBAC, file attachments, and billing</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <!-- In Progress -->
+                <div class="proj-card fade-up">
+                    <div class="proj-top">
+                        <span class="dot progress"></span>
+                        <div class="proj-name">ClubConnect</div>
+                    </div>
+                    <div class="proj-desc">Social presence platform for hospitality & nightlife — HeatUp (B2C dating/social) + Club-Web (B2B venue management)</div>
+                    <span class="proj-badge badge-progress">In Progress</span>
+                </div>
+
+                <div class="proj-card fade-up d1">
+                    <div class="proj-top">
+                        <span class="dot progress"></span>
+                        <div class="proj-name">WeGang (RideBuddy)</div>
+                    </div>
+                    <div class="proj-desc">GPS tracking & trip planning app with live location sharing, POI, and expense tracking</div>
+                    <span class="proj-badge badge-progress">In Progress</span>
+                </div>
+
+                <div class="proj-card fade-up d2">
+                    <div class="proj-top">
+                        <span class="dot progress"></span>
+                        <div class="proj-name">TheCoach</div>
+                    </div>
+                    <div class="proj-desc">Real-time multilingual translation system for sports coaches — speech-to-text across 8+ languages for multicultural teams</div>
+                    <span class="proj-badge badge-progress">In Progress</span>
+                </div>
+
+                <div class="proj-card fade-up">
+                    <div class="proj-top">
+                        <span class="dot progress"></span>
+                        <div class="proj-name">TripsPulse</div>
+                    </div>
+                    <div class="proj-desc">B2B SaaS for hospitality — AI-powered guest review analytics, sentiment insights, and reputation management</div>
+                    <span class="proj-badge badge-progress">In Progress</span>
+                </div>
+
+                <div class="proj-card fade-up d1">
+                    <div class="proj-top">
+                        <span class="dot done"></span>
+                        <div class="proj-name"><a href="https://do9ood.com" target="_blank" rel="noopener">Do9ood</a></div>
+                    </div>
+                    <div class="proj-desc">Social platform for everyday kindness — "LinkedIn of goodness" where good deeds are visible, verifiable, and rewarded</div>
+                    <span class="proj-badge badge-done">Launched</span>
+                </div>
+
+                <!-- Concept -->
+                <div class="proj-card fade-up d2">
+                    <div class="proj-top">
+                        <span class="dot concept"></span>
+                        <div class="proj-name">VDR (Virtual Data Room)</div>
+                    </div>
+                    <div class="proj-desc">Secure, governance-first document sharing platform for audits, legal reviews, and vendor due diligence — audit-ready & fully traceable</div>
+                    <span class="proj-badge badge-concept">Concept</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section" id="why">
+        <div class="section-inner">
+            <div class="section-hdr">
+                <span class="section-tag">Why ThatWhy</span>
+                <h2>Built on trust &amp; results</h2>
+                <p>We don't just build software — we build lasting partnerships that drive measurable outcomes.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card fade-up">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+                    <h3>Strategic Approach</h3>
+                    <p>Every solution is built around your specific business objectives and requirements — no cookie-cutter templates, ever.</p>
+                </div>
+                <div class="why-card fade-up d1">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                    <h3>Scalable Solutions</h3>
+                    <p>We design systems that grow with your business — from startup MVP to enterprise scale, without painful rewrites.</p>
+                </div>
+                <div class="why-card fade-up d2">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Client-Focused Service</h3>
+                    <p>We prioritize long-term partnerships and measurable business impact over short-term deliverables.</p>
+                </div>
+                <div class="why-card fade-up d3">
+                    <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    <h3>Cutting-Edge Technology</h3>
+                    <p>We leverage the latest technologies while maintaining a focus on practical, results-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <div class="section-inner">
+            <div class="section-hdr">
+                <span class="section-tag">Let's Work Together</span>
+                <h2>Ready to build something great?</h2>
+                <p>Transform your business with professional IT solutions. We'd love to hear what you're working on.</p>
+            </div>
+            <div>
+                <div class="contact-card">
+                    <p>Drop us a line and we'll get back to you quickly.</p>
+                    <a href="mailto:hello@thatwhy.me" class="contact-email-link"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> hello@thatwhy.me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="footer">
-        <p>&copy; 2026 ThatWhy. All Rights Reserved.</p>
-        <p style="margin-top: 0.5rem;">
-            <a href="privacy-policy.html" style="color: var(--accent-blue); text-decoration: none; margin: 0 0.5rem;">Privacy Policy</a> | 
-            <a href="terms-of-use.html" style="color: var(--accent-blue); text-decoration: none; margin: 0 0.5rem;">Terms of Use</a>
-        </p>
-        <div class="social">
-            <!--<a href="https://www.linkedin.com/company/thatwhy" target="_blank" aria-label="LinkedIn">in</a>
-            <a href="https://twitter.com/thatwhy" target="_blank" aria-label="Twitter">tw</a>-->
-            <a href="https://github.com/thungong" target="_blank" aria-label="GitHub">gh</a>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-use.html">Terms of Use</a>
+            <a href="https://github.com/thungong" target="_blank" rel="noopener">GitHub</a>
         </div>
+        <p>&copy; 2026 ThatWhy. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        // Sticky nav scroll effect
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // Mobile menu toggle
+        const toggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        toggle.addEventListener('click', () => {
+            const open = navLinks.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', open);
+        });
+        navLinks.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => {
+                navLinks.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Fade-up on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
